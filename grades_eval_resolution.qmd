@@ -59,7 +59,7 @@ ggplot(grades, aes(x = group)) +
 ```{r}
 grades |> 
   group_by(group)|> 
-   filter(module == "Hunting and Gathering Skills")|>
+   filter(course == "Hunting and Gathering Skills")|>
  summarise(average_of_the_grades_in_Hunting_and_Gathering_Skills = mean(grade))
  
 ```
@@ -83,7 +83,23 @@ min = min(grade),
 knitr::kable()  
 ```
 
+## Question 9
+```{r}
+grades |> 
+  filter(course == "Shamanism and Spiritual Practices")|>
+  group_by(id, group)|> 
+  summarise(number_of_grade = n())
+   
+```
+
+## Question 10 : 
 ```{r}
 
 ```
 
+## Question 11 : 
+```{r}
+
+```
+
+## Question 12 : 
