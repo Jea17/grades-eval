@@ -32,3 +32,13 @@ grades |>
   nrow()
 ```
 The data set contains 938 students. 
+
+## Question 4 : 
+```{r}
+grades |> 
+  group_by(id, group)|> 
+  distinct(id)|> 
+  slice_tail(n = 5) |>
+knitr::kable()
+```
+
