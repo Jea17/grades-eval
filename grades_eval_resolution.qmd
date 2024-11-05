@@ -54,3 +54,36 @@ ggplot(grades, aes(x = group)) +
   )
 ```
 
+
+##Question 6 
+```{r}
+grades |> 
+  group_by(group)|> 
+   filter(module == "Hunting and Gathering Skills")|>
+ summarise(average_of_the_grades_in_Hunting_and_Gathering_Skills = mean(grade))
+ 
+```
+
+## Question 7 : 
+```{r}
+
+```
+
+## Question 8 : 
+```{r}
+grades |> 
+  group_by(id, group)|>
+  summarise (
+     "number of grades per student" = n(),
+min = min(grade),
+    max= max(grade),
+    mean = mean(grade),
+    meadian = median(grade))|>
+   slice_tail(n = 5) |>
+knitr::kable()  
+```
+
+```{r}
+
+```
+
