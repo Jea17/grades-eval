@@ -18,4 +18,11 @@ library(stringr)
 ```{r}
 grades <- vroom(here("grades (2).csv"))
 ```
+## Question 2 
+```{r}
+grades |>
+  nrow()
+```
+The data set contains 64686 grades. 
+
 
