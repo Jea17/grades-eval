@@ -103,3 +103,17 @@ grades |>
 ```
 
 ## Question 12 : 
+```{r}
+grades |> 
+  group_by(id, group, course)|> 
+  summarise(average_of_grades = mean(grade))
+```
+
+
+```{r}
+grades |> 
+  pivot_wider(names_from = course, values_from = mean(grade))|> 
+  select(-n)
+```
+
+## Question 13
